@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock  %}
+{% block content %}
+
+<body>
+    <h1 style="color:red">Login</h1>
+    <form action="{{url_for("login")}}" method="POST" >
+        User Name : <input type="text" name = "username" autocomplete="off">
+        Password :  <input type="password" name = "password" autocomplete="off">
+        <input type="submit" value="Login">
+        {% if message %}
+        <p style="color: brown;">{{ message }}</p>   
+        {% endif %}   
+    </form> 
+</body>
+{% endblock %}
